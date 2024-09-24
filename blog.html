@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <!-- Font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- google font cdn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <!-- daisyui and tailwind css cdn -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: "#B4F461",
+        },
+        fontFamily: {
+          Lexend: ['Lexend', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+</head>
+<body>
+    <header class="bg-[#F9F7F3] h-20">
+      <nav class="w-9/12 mx-auto justify-center">
+        <div class="navbar">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div role="button" class="btn btn-ghost lg:hidden">
+          
+              </div>
+            </div>
+            <button onclick="window.open('index.html')" class="btn btn-active bg-[#B4F461] text-xl text-black lg:px-12 ta">Home</button>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <img src="./assets/logo.png" alt="">
+  
+              <p class="text-xl font-bold ml-2 mt-3">Donate Bangladesh</p>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <img src="./assets/coin.png" alt="">
+          <p class="text-xl">5500 BDT</p>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="flex gap-2 mt-10  ml-60">
+        <h1 class="font-extrabold text-4xl">Important FAQ </h1>
+        <i  class="fa-regular fa-circle-question text-3xl"></i>
+      </div>
+    <section class=" w-9/12 mx-auto mt-16">
+      <div class="collapse collapse-arrow border-2 ">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What is the Document object Model(DOM)?</div>
+        <div class="collapse-content">
+          <p> The Document Object Model is a programming interface for html,objrct,propirties,methods and elements to get change add or delete Html.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow border-2 mt-4">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">What is event delegation in the context of the Dom, and why is it Usful?</div>
+        <div class="collapse-content">
+          <p>Event delegation is a design pattern in JavaScript used to efficiently manage and handle events on multiple child elements by attaching a single event listener to a common ancestor element.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow border-2 mt-4">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do You manupulate an element's atributes and styles using the Dom?</div>
+        <div class="collapse-content">
+          <p>There is so many element probably 6types of elements can manupulate element and styling.</p>
+        </div>
+      </div>
+
+    </section>
+    </main>
+  
+  
+</body>
+</html>
