@@ -11,7 +11,7 @@ color.style.backgroundColor='tomato';
 
 document.getElementById('donatation-btn').addEventListener('click', function(){
   console.log('donation btn clicked')
-  window.location.href='./index.html';
+  window.location.href='index.html';
 });
 
 
