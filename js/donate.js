@@ -98,9 +98,6 @@ document.getElementById('donate-btn-2').addEventListener('click', function(){
         document.getElementById('Available-Balance').innerText = newBalance;
       
     });
-    function show(){
-      
-    }
     
 
 
