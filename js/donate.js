@@ -39,15 +39,14 @@ document.getElementById('donate-btn-2').addEventListener('click', function(){
 
   const inputValue= document.getElementById('donate-feni-input').value;
   
-  if(isNaN(inputValue)|| inputValue <= 0 ){
+  if(isNaN(inputValue) || inputValue <= 0 ){
   
     document.getElementById('my_modal_2').close();
-  
-  
     return alert ('Attempt Failed! invalid  input');
-  
   }
-  
+  if(inputValue > accountBalanceNumber){
+    return alert('unsufficient Balance');
+  }
     const colectedAmount = document.getElementById('collected-amount-feni').innerText;
     console.log(colectedAmount);
     const donateinput = document.getElementById('donate-feni-input').value;
@@ -72,14 +71,14 @@ document.getElementById('donate-btn-2').addEventListener('click', function(){
 
     const inputValue= document.getElementById('donate-for-qmovement').value;
     
-    if(isNaN(inputValue)|| inputValue <= 0 ){
+    if(isNaN(inputValue)|| inputValue <= 0 ) {
     
       document.getElementById('my_modal_2').close();
-    
     
       return alert ('Attempt Failed! invalid  input');
     
     }
+
     
       const colectedAmount = document.getElementById('collected-money-qmovement').innerText;
       console.log(colectedAmount);
@@ -93,11 +92,28 @@ document.getElementById('donate-btn-2').addEventListener('click', function(){
     
         const newAmount = colectedAmountNumber + donateinputNumber;
         const newBalance = accountBalance - donateinputNumber;
-    
+       
         document.getElementById('collected-money-qmovement').innerText = newAmount;
         document.getElementById('Available-Balance').innerText = newBalance;
+
       
+    
     });
+    function showSectionById(id){
+      document.getElementById('header-main').classList.add('hidden');
+      document.getElementById('nav-bar').classList.add('hidden');
+      document.getElementById('donate-section').classList.add('hidden');
+      document.getElementById('divider-line').classList.add('hidden')
+  
+      document.getElementById('transaction-section').classList.remove('hidden');
+    
+      
+      document.getElementById(id).classList.remove('hidden');
+    
+    }
+
+    // transaction history add
+    
     
 
 
